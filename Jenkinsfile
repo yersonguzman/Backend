@@ -33,7 +33,7 @@ pipeline {
 					userRemoteConfigs: 
 						[[
 							credentialsId: 'GitHub_yersonguzman', 
-							url: 'https://github.com/yersonguzman/backendCeiba.git'
+							url: 'https://github.com/yersonguzman/Backend.git'
 						]]])
 						
 					sh 'gradle clean'

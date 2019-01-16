@@ -11,11 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-
 @Entity
-@Table (name = "Registro")
+@Table(name = "Registro")
 public class Registro {
-	
+
 	public Registro() {
 	}
 
@@ -24,34 +23,27 @@ public class Registro {
 		super();
 		this.idRegistro = idRegistro;
 		this.placa = placa;
-	//	this.vehiculoHistorico = vehiculoHistorico;
 		this.fechaIngreso = fechaIngreso;
 		this.fechaSalida = fechaSalida;
 		this.totalPago = totalPago;
 	}
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	@Column (name = "id_registro")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_registro")
 	private long idRegistro;
-	
-		
+
 	@Column(name = "fk_placa", length = 7)
 	private String placa;
-	
-//	@ManyToOne(fetch = FetchType.EAGER)
-//	@JoinColumn(name = "fk_placa", insertable = false, updatable = false)
-// 	private Vehiculo vehiculoHistorico;
-	
+
 	@NotNull
 	@Column(name = "fecha_ingreso")
 	private LocalDateTime fechaIngreso;
-	
+
 	@Column(name = "fecha_salida")
 	private LocalDateTime fechaSalida;
-	
-	
-	@Column (name = "total_pago")
+
+	@Column(name = "total_pago")
 	private BigDecimal totalPago;
 
 	public long getIdRegistro() {
@@ -69,14 +61,6 @@ public class Registro {
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
-
-	//public Vehiculo getVehiculoHistorico() {
-	//	return vehiculoHistorico;
-	//}
-
-	//public void setVehiculoHistorico(Vehiculo vehiculoHistorico) {
-		//this.vehiculoHistorico = vehiculoHistorico;
-	//}
 
 	public LocalDateTime getFechaIngreso() {
 		return fechaIngreso;
@@ -102,6 +86,4 @@ public class Registro {
 		this.totalPago = totalPago;
 	}
 
-	
 }
-

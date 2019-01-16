@@ -121,8 +121,7 @@ public class VehiculoServiceImp implements VehiculoService {
 	public boolean IngresarDia() {
 		boolean diaValido = false;
 		LocalDate fechaActual = getfechaActual();
-		if (fechaActual.getDayOfWeek().equals(DayOfWeek.SUNDAY)
-				|| fechaActual.getDayOfWeek().equals(DayOfWeek.MONDAY)) {
+		if (fechaActual.getDayOfWeek().equals(DayOfWeek.SUNDAY)	|| fechaActual.getDayOfWeek().equals(DayOfWeek.MONDAY)) {
 			diaValido = true;
 		}
 		return diaValido;

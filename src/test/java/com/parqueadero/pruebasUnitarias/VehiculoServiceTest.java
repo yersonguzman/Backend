@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -114,7 +113,7 @@ public class VehiculoServiceTest {
 	public void permitirIngresoParqueadero() throws ParseException {
 		// Arrange
 		boolean validarIngreso;
-		boolean PermitirIngreso = true;
+		boolean PermitirIngreso= true;
 		LocalDate fecha = LocalDate.now().withDayOfMonth(7);
 		Mockito.when(vehiculoServiceImpSpy.getfechaActual()).thenReturn(fecha);
 		// Act
@@ -135,19 +134,15 @@ public class VehiculoServiceTest {
 		// Assert
 		assertEquals(PermitirIngreso, validarIngreso);
 	}
-    
-//	@Test
-//	public void VerificarVehiculoParqueado() throws ParseException{
-		//Arrange
-//		Optional<Vehiculo> vehiculoParqueado;
-//		Vehiculo vehiculo = new VehiculoTestDataBuilder().conPlaca("LAT605").build();
-//		Mockito.when(vehiculoRepository.findById(vehiculo.getPlaca()));
-		//Act
-//		vehiculoParqueado = vehiculoServiceImp.consultarVehiculo(vehiculo.getPlaca());
-		//Assert
-//		assertEquals(vehiculo, vehiculoParqueado);
-//	}
-	
-	
-	
+
+	@Test
+	public void VerificarVehiculoParqueado() throws ParseException {
+		// Arrange
+
+		// Act
+
+		// Assert
+
+	}
+
 }

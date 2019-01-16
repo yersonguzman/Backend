@@ -15,13 +15,13 @@ public class Vehiculo {
 	public Vehiculo() {
 	}
 
-	public Vehiculo(String placa, Integer cilindraje, @NotNull String tipo,LocalDateTime fechaIngreso) {
+	public Vehiculo(String placa, Integer cilindraje, @NotNull String tipo, LocalDateTime fechaIngreso) {
 		super();
 		this.placa = placa;
 		this.cilindraje = cilindraje;
 		this.tipo = tipo;
 		this.fechaIngreso = fechaIngreso;
-		
+
 	}
 
 	@Id
@@ -34,7 +34,7 @@ public class Vehiculo {
 	@NotNull
 	@Column(name = "tipo")
 	private String tipo;
-	
+
 	@NotNull
 	@Column(name = "fecha_ingreso")
 	private LocalDateTime fechaIngreso;
@@ -70,7 +70,5 @@ public class Vehiculo {
 	public void setFechaIngreso(LocalDateTime fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
-	
-	
 
 }
