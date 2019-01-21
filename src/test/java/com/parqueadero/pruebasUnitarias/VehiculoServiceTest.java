@@ -4,16 +4,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.text.ParseException;
 import java.time.LocalDate;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -34,10 +31,8 @@ public class VehiculoServiceTest {
 	@Mock
 	private VehiculoRepository vehiculoRepository;
 
-	@Before
-	public void before() {
-		MockitoAnnotations.initMocks(this);
-	}
+	
+	
 
 	@Test
 	public void ValidarPlacaA() {
@@ -62,7 +57,7 @@ public class VehiculoServiceTest {
 	}
 
 	@Test
-	public void probarConCapacidadEspacioCarros() throws ParseException {
+	public void probarConCapacidadEspacioCarros()  {
 		// Arrange
 		boolean hayCapacidad;
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("carro").build();
@@ -74,7 +69,7 @@ public class VehiculoServiceTest {
 	}
 
 	@Test
-	public void probarSinCapacidadEspacioCarros() throws ParseException {
+	public void probarSinCapacidadEspacioCarros()  {
 		// Arrange
 		boolean hayCapacidad;
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("carro").build();
@@ -86,7 +81,7 @@ public class VehiculoServiceTest {
 	}
 
 	@Test
-	public void probarConCapacidadEspacioMoto() throws ParseException {
+	public void probarConCapacidadEspacioMoto()  {
 		// Arrange
 		boolean hayCapacidad;
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("moto").build();
@@ -98,7 +93,7 @@ public class VehiculoServiceTest {
 	}
 
 	@Test
-	public void probarSinCapacidadEspacioMoto() throws ParseException {
+	public void probarSinCapacidadEspacioMoto()  {
 		// Arrange
 		boolean hayCapacidad;
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("moto").build();
@@ -110,7 +105,7 @@ public class VehiculoServiceTest {
 	}
 
 	@Test
-	public void permitirIngresoParqueadero() throws ParseException {
+	public void permitirIngresoParqueadero()  {
 		// Arrange
 		boolean validarIngreso;
 		LocalDate fecha = LocalDate.now().withDayOfMonth(7);
@@ -122,7 +117,7 @@ public class VehiculoServiceTest {
 	}
 
 	@Test
-	public void NoPermitirIngresoParqueadero() throws ParseException {
+	public void NoPermitirIngresoParqueadero() {
 		// Arrange
 		boolean validarIngreso;
 		LocalDate fecha = LocalDate.now().withDayOfMonth(8);
@@ -134,7 +129,7 @@ public class VehiculoServiceTest {
 	}
 
 	@Test
-	public void VerificarVehiculoParqueado() throws ParseException {
+	public void VerificarVehiculoParqueado()  {
 		// Arrange
 
 		// Act
