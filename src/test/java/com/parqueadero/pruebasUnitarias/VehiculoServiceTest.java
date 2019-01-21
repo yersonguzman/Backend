@@ -113,26 +113,24 @@ public class VehiculoServiceTest {
 	public void permitirIngresoParqueadero() throws ParseException {
 		// Arrange
 		boolean validarIngreso;
-		boolean PermitirIngreso= true;
 		LocalDate fecha = LocalDate.now().withDayOfMonth(7);
 		Mockito.when(vehiculoServiceImpSpy.getfechaActual()).thenReturn(fecha);
 		// Act
 		validarIngreso = vehiculoServiceImpSpy.IngresarDia();
 		// Assert
-		assertEquals(PermitirIngreso, validarIngreso);
+		assertEquals(true, validarIngreso);
 	}
 
 	@Test
 	public void NoPermitirIngresoParqueadero() throws ParseException {
 		// Arrange
 		boolean validarIngreso;
-		boolean PermitirIngreso = false;
 		LocalDate fecha = LocalDate.now().withDayOfMonth(8);
 		Mockito.when(vehiculoServiceImpSpy.getfechaActual()).thenReturn(fecha);
 		// Act
 		validarIngreso = vehiculoServiceImpSpy.IngresarDia();
 		// Assert
-		assertEquals(PermitirIngreso, validarIngreso);
+		assertEquals(false, validarIngreso);
 	}
 
 	@Test
