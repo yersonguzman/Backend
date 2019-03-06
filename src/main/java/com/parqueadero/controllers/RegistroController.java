@@ -47,5 +47,11 @@ public class RegistroController {
 	public void eliminarRegistro(@PathVariable Long idRegistro) {
 		registroService.eliminarRegistro(idRegistro);
 	}
+	
+	@GetMapping("/{placa}")
+	public List<Registro> listarRegistroPorPlaca(@PathVariable String placa){
+		return null;
+		
+	}
 
 }

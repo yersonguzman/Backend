@@ -47,5 +47,10 @@ public class RegistroServiceImp implements RegistroService {
 	public List<Registro> listarRegistros() {
 		return registroRepository.findAll();
 	}
+	
+	@Override
+	public List<Registro> ListarRegistroPorPlaca(){
+		return null;
+	}
 
 }

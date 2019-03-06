@@ -1,7 +1,7 @@
 server:  servlet:    context-path: /api
 spring:
   datasource:
-    password: 1234
-    username: root
-    url: jdbc:mysql://localhost:3306/estacionamiento    driver-class-name: com.mysql.jdbc.Driver
-  jpa:    hibernate:      ddl-auto: update    database-platform: org.hibernate.dialect.MySQL5Dialect      show-sql: true            
+    password: Desarrollo123
+    username: Developer@funlamserver    url: jdbc:mysql://funlamserver.mysql.database.azure.com/estacionamiento?useSSL=true&requireSSL=false&serverTimezone=UTC&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false    port: 3306
+    #url: jdbc:mysql://localhost:3306/estacionamiento    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:    hibernate:      ddl-auto: update    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect     show-sql: true            

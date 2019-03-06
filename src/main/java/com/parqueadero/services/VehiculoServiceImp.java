@@ -35,19 +35,7 @@ public class VehiculoServiceImp implements VehiculoService {
 	@Override
 	public Vehiculo crearVehiculo(Vehiculo vehiculo) {
 
-		boolean espacioParqueo = CapacidadEstacionamiento(vehiculo);
-		if (!espacioParqueo) {
-			throw new ParqueoLleno(Constants.sin_espacio);
-		}
-
-		boolean restriccionPlacaA = ValidarPlaca(vehiculo.getPlaca());
-		if (restriccionPlacaA) {
-			boolean diaValido = IngresarDia();
-			if (!diaValido) {
-				throw new DiaNoPermitido(Constants.dia_no_permitido);
-			}
-		}
-
+		
 		boolean vehiculoYaExiste = verificarCarroExistente(vehiculo.getPlaca());
 
 		if (vehiculoYaExiste) {

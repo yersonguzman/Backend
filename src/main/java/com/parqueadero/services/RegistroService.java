@@ -16,5 +16,7 @@ public interface RegistroService {
 	
 	public List <Registro> listarRegistros();
 	
+	public List<Registro> ListarRegistroPorPlaca();
+	
 	
 }
